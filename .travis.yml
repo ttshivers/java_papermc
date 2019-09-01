@@ -5,4 +5,4 @@ install:
   - docker build -t ttshivers/java_papermc .
 
 script:
-  - docker run ttshivers/java_papermc -e "SERVER_MEMORY=1024" -e "STARTUP='java -Xms{{SERVER_MEMORY}}M -Xmx{{SERVER_MEMORY}}M -Xmns{{NURSERY_MINIMUM}}M -Xmnx{{NURSERY_MAXIMUM}}M -Xgc:concurrentScavenge -Xgc:dnssExpectedTimeRatioMaximum=3 -Xgc:scvNoAdaptiveTenure -Xdisableexplicitgc  -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}'"
+  - docker run ttshivers/java_papermc -e "SERVER_JARFILE=server.jar" -e "SERVER_MEMORY=1024" -e "STARTUP='java -Xms{{SERVER_MEMORY}}M -Xmx{{SERVER_MEMORY}}M -Xmns{{NURSERY_MINIMUM}}M -Xmnx{{NURSERY_MAXIMUM}}M -Xgc:concurrentScavenge -Xgc:dnssExpectedTimeRatioMaximum=3 -Xgc:scvNoAdaptiveTenure -Xdisableexplicitgc  -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}'"
