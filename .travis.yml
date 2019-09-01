@@ -8,4 +8,4 @@ install:
   - docker build -t ttshivers/java_papermc .
 
 script:
-  - docker run ttshivers/java_papermc -e "SERVER_JARFILE=server.jar" -e SERVER_JARFILE -e SERVER_MEMORY -e STARTUP
+  - docker run ttshivers/java_papermc -e SERVER_JARFILE -e SERVER_MEMORY -e STARTUP
