@@ -4,8 +4,7 @@ services:
   - docker
 
 env:
-  - SERVER_MEMORY=1024
-  - STARTUP="java -Xms{{SERVER_MEMORY}}M -Xmx{{SERVER_MEMORY}}M -Xmns{{NURSERY_MINIMUM}}M -Xmnx{{NURSERY_MAXIMUM}}M -Xgc:concurrentScavenge -Xgc:dnssExpectedTimeRatioMaximum=3 -Xgc:scvNoAdaptiveTenure -Xdisableexplicitgc  -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}"
+  - SERVER_MEMORY=1024 STARTUP="java -Xms{{SERVER_MEMORY}}M -Xmx{{SERVER_MEMORY}}M -Xmns{{NURSERY_MINIMUM}}M -Xmnx{{NURSERY_MAXIMUM}}M -Xgc:concurrentScavenge -Xgc:dnssExpectedTimeRatioMaximum=3 -Xgc:scvNoAdaptiveTenure -Xdisableexplicitgc  -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}"
 
 install:
   - docker build -t ttshivers/java_papermc .
