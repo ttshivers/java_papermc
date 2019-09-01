@@ -2,9 +2,7 @@ FROM        adoptopenjdk/openjdk12-openj9:alpine-slim
 
 LABEL       author="Travis Shivers" maintainer="ttshivers@gmail.com"
 
-RUN apt-get update -y \
- && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 \
- && useradd -d /home/container -m container
+RUN useradd -d /home/container -m container
  
 USER container
 ENV  USER=container HOME=/home/container
