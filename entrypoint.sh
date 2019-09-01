@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /home/container
 
 # Output Current Java Version
