@@ -8,4 +8,4 @@ install:
   - docker build -t ttshivers/java_papermc .
 
 script:
-  - docker run ttshiver/java_papermc
+  - docker run ttshivers/java_papermc
