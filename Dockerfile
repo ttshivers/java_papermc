@@ -2,7 +2,7 @@ FROM        adoptopenjdk/openjdk12-openj9:alpine-slim
 
 LABEL       author="Travis Shivers" maintainer="ttshivers@gmail.com"
 
-RUN useradd -d /home/container -m container
+RUN adduser -S container
  
 USER container
 ENV  USER=container HOME=/home/container
