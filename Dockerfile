@@ -1,4 +1,4 @@
-FROM        adoptopenjdk/openjdk12-openj9:alpine-slim
+FROM        adoptopenjdk/openjdk13-openj9:alpine-slim
 
 LABEL       author="Travis Shivers" maintainer="ttshivers@gmail.com"
 
