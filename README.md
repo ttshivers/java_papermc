@@ -1,1 +1,1 @@
-Pterodactyl docker image for Java and PaperMCc
+Pterodactyl docker image for Java and PaperMC
