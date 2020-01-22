@@ -14,7 +14,7 @@ export NURSERY_MAXIMUM=$(($SERVER_MEMORY * 4 / 5))
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
-curl -o server.jar "https://papermc.io/api/v1/paper/1.15.1/latest/download"
+curl -o server.jar "https://papermc.io/api/v1/paper/1.15.2/latest/download"
 
 # Run the Server
 eval ${MODIFIED_STARTUP}
