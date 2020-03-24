@@ -1,12 +1,9 @@
-FROM        adoptopenjdk/openjdk13-openj9:alpine-slim
+FROM        adoptopenjdk/openjdk14-openj9:alpine-slim
 
 LABEL       author="Travis Shivers" maintainer="ttshivers@gmail.com"
 
 RUN apk --no-cache add curl iproute2 && adduser -S container
  
-USER container
-ENV  USER=container HOME=/home/container
-
 USER        container
 ENV         USER=container HOME=/home/container
 
